@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document title</title>
+  <!--vendor -->
+  <link rel="stylesheet" href="input-with-holder.css">
+  <link rel="stylesheet" href="input2.css">
+  <script type="text/javascript" src="../js/base.js"></script>
+  </head>
+<body>
+  <!--body-->
+
+
+<div id="inputholder" class="inputholder inp2 inp-blue">
+  <input type="text" id="inputtext" autofocus/>
+</div>
+
+<script type="text/javascript">
+
+$("#inputholder input").onfocus(function(){ 
+  $("#inputholder").addClass(" active");
+    event.stopPropagation();
+    return false;
+});
+
+$("#inputholder input")[0].onblur=(function(){ 
+  $("#inputholder").removeClass("active");
+});
+
+$("#inputholder").click(function(e){
+  $("#inputholder input").focus();
+  $("#inputholder").addClass(" active");
+    event.stopPropagation();
+});  
+
+
+$("#inputtext").keydown(function(e){
+  this.style.width = ((this.value.length + 1)*8 ) + 'px';
+  var valueofinput= this.value;
+  if(e.which==13 && valueofinput && (valueofinput.trim()!= "") ){
+     $('#inputtext').before('<div class="tag">' + valueofinput + '<span>x</span></div>');
+    $('input').val('');
+  }
+var  key=  e.keyCode || e.charCode;
+if(key==8){
+       $('#inputholder .tag:last-of-type').remove();
+}
+
+});
+
+$('html').click(function() { 
+  $('#inputholder .tag span').click(function(){
+       this.parentNode.remove();
+  $("#inputholder").removeClass("active");
+    });
+});
+</script>
+</body>
+</html>

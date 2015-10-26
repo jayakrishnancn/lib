@@ -1,0 +1,60 @@
+<link href="../all/create-msg.css" rel="stylesheet"> 
+<link href="info.css" rel="stylesheet"> 
+<link href="../button1.css" rel="stylesheet"> 
+<link href="../global.css" rel="stylesheet"> 
+<script type="text/javascript" src="../../js/base.js" ></script>
+<!-- createmsg -->
+<div id="createmsg" class="createmsg min">  
+<h1>
+    <div class="box-control ">
+        <div id="close" class="close info-container">
+            <div class="info black up">Close</div>
+        x</div>
+        <div id="max" class="close info-container">
+            <div class="info black up">maximze</div>
+        []</div>
+    </div><!-- box-control  -->
+<div class="heading">
+ Create msg
+</div>
+</h1><!-- h1 -->
+
+<div class="msg-container">
+<form action="?" method="post">
+    <input class="msg-input bold" name="to" value="" placeholder="To :">
+    <input class="msg-input bold" name="subject" value="" placeholder="Subject :">
+    <textarea class="msg-input "  name="text" placeholder="Message :"></textarea>
+    </div><!-- msg-container  -->
+    <div class="msg-footer ">
+        <button class="bu1 bu-blue">Send</button>
+    </div>
+</form>
+</div>
+<!-- createmsg  ends-->
+   
+
+
+<script type="text/javascript">
+
+    var x = $('#createmsg')[0];
+    var max_min_btn=$('#createmsg #max')[0];
+function maxmin(){  
+    if(!x.classList.contains("max"))
+        max_min_btn.innerHTML="[]";
+    else max_min_btn.innerHTML="-";
+    return;
+}
+$('#createmsg h1 .heading').click(function(e){
+    $('#createmsg').toggleclass('createmsg min','createmsg');
+    maxmin();
+});
+$('#createmsg #max').click(function(){
+    $('#createmsg').toggleclass('createmsg max','createmsg');
+    maxmin();
+});
+$('#createmsg #close').click(function(){
+    $('#createmsg').remove();
+});
+
+
+</script>   

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document title</title>
+	<!--vendor --><link rel="stylesheet" href="../normalize.css"> 
+	<!--vendor --><link rel="stylesheet" href="progressbar.css"> 
+	</head>
+<body>
+	<!--body-->
+
+	<div style="width:80%;margin:auto;">
+	<!--red-->
+	<br/><br/>
+<div class="progress-bar">
+	<div class="bar red" ><span class="bar-text">45%</span></div>
+</div>
+	<br/>
+<div id="k" class="progress-bar ">
+	<div class="bar red stripe" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+
+
+	<!--blue-->
+	<br/><br/>
+<div class="progress-bar">
+	<div class="bar blue" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+	<br/>
+<div class="progress-bar ">
+	<div class="bar blue stripe" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+
+
+	<!--green-->
+	<br/><br/>
+<div class="progress-bar">
+	<div class="bar green" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+	<br/>
+<div class="progress-bar ">
+	<div class="bar green stripe" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+
+
+	<!--orange-->
+	<br/><br/>
+<div class="progress-bar">
+	<div class="bar orange" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+	<br/>
+<div class="progress-bar ">
+	<div class="bar orange stripe" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+
+
+	<!--black-->
+	<br/><br/>
+<div class="progress-bar">
+	<div class="bar black" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+	<br/>
+<div class="progress-bar ">
+	<div class="bar black stripe" style="width:45%"><span class="bar-text">45%</span></div>
+</div>
+ 
+
+ </div>
+
+<button onclick="myFunction()">Try it</button>
+</body>
+<script type="text/javascript"> 
+    	var bar=document.querySelector('#k .bar'); 
+    	if( !(parseInt(bar.style.width)>0 && parseInt(bar.style.width)<100))
+    		bar.style.width=0;
+    	bar.children[0].innerHTML=parseInt(bar.style.width)+"%";
+    	window.onload=(myFunction());
+function myFunction() {
+    setTimeout(function(){
+    	curw=parseInt(bar.style.width);
+    	if(curw<=100)bar.children[0].innerHTML=curw+"%";else bar.children[0].innerHTML="100%";
+    	bar.style.width=(curw+1)+"%"; 
+    	if(curw<=100)myFunction(); 
+    }, 100);
+}
+
+
+</script>
+</html>

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="chatbox.css">
+<link rel="stylesheet" href="../global.css">
+<script type="text/javascript" src="../../js/base.js" ></script>
+<div class="chat-box min">
+	<h1>Name <div style="padding:0;" class="box close">x</div></h1>
+	<ul class="chat-history">
+	 <div class="allchats old-model">
+	 	<div class="msgs from-me"><img src="../../images/prof.jpg" alt="me"><div class="me"><div class="chat-arrow"></div>blah bah blah bah</div></div>
+	 	<div class="msgs from-me"><img src="../../images/prof.jpg" alt="me"><div class="me"><div class="chat-arrow"></div>blah bah blah bah</div></div>
+	 	<div class="msgs from-he"><img src="../../images/prof.jpg" alt="he"><div class="he"><div class="chat-arrow"></div>blah bah blah bah</div></div>
+	 </div>
+	</ul>
+	<form>
+		<input autocomplete="off" class="chat-input" value="" name="chat-msg">
+	</form>
+</div>
+
+<script type="text/javascript">
+	$('.chat-box h1').click(function(){
+		$('.chat-box').toggleclass('chat-box min','chat-box');
+	});
+$('.chat-box h1 .close').click(function(){
+		$('.chat-box').remove();
+	});
+</script>

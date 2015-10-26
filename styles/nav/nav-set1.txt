@@ -1,0 +1,66 @@
+<!-- nav top-nav-->
+<div id="nav" class="top-nav">
+<!--top navigation menu-->
+<div class="center">
+		<a href="#"  class="nav-banner" >
+			<img src="images/prof.jpg" alt="Banner">
+		</a>
+		<span id="menu-icon">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+			</svg>
+		</span>
+		<ul class="navbar-content">
+			<li class="active" > <a href="#" class="active" >content</a></li>
+			<li id="one" class="drop-down">
+				<a >content<span class="dropdown_icon">&nbsp;</span></a>
+			<ul>
+				<li><a href="#" >drop-it drop-it drop-it drop-it </a></li>
+				<li><a href="#" >drop-it</a></li>
+				<li><a href="#" >drop-it</a></li>
+			</ul>
+
+			</li>
+				<form>
+					<li class="form-control">
+						<input class="inp2 inp_blue inp_left" style="width:92%" autofocus > 
+					</li>		
+					<li>
+						<button class="bu1 bu_white">Search</button>
+					</li>		
+				</form>	
+		</ul>
+
+			<ul class="navbar-content left">
+			<li id="two" class="drop-down">
+				<a >content<span class="dropdown_icon">&nbsp;</span></a>
+			<ul>
+				<li><a href="#" >drop-it</a></li>
+				<li><a href="#" >drop-it</a></li>
+				<li><a href="#" >drop-it</a></li>
+			</ul>
+
+			<li > <a href="#"  >content</a></li>
+			<li><a href="#" >Logout</a></li>
+			</li>
+		</ul>
+</div>
+</div>
+<!-- nav top nav end-->
+
+
+<div id="content">
+</div>
+
+<script type="text/javascript">
+$('#one.drop-down').click(function(){
+		$('#one.drop-down ul').toggle();
+});
+$('#two.drop-down').click(function(){
+		$('#two.drop-down ul').toggle();
+});
+
+$('#content').click(function(){
+		$('.drop-down ul').hide();	
+});
+</script>

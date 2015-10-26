@@ -1,0 +1,90 @@
+/*  input (inp1) */
+
+.inp1,
+.inp1:hover {
+    outline: 0;
+    min-height: 20px;
+    line-height: 20px;
+    padding: 5px 10px;
+    font-size: 13px;
+    background: #fff;
+    color: #555;
+    border: 1px solid #cfcfcf;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    width: 95%
+}
+.inp1:focus,
+.inp1.active {
+    border-color: #999;
+    -webkit-box-shadow: 2px 2px 3px #ccc inset;
+    -moz-box-shadow: 2px 2px 3px #ccc inset;
+    -o-box-shadow: 2px 2px 3px #ccc inset;
+    box-shadow: 2px 2px 3px #ccc inset
+}
+.inp1::-moz-placeholder {
+    color: #ccc;
+    opacity: 1
+}
+.inp1:-ms-input-placeholder {
+    color: #ccc
+}
+.inp1::-webkit-input-placeholder {
+    color: #ccc
+}
+.inp1[disabled] {
+    opacity: .6;
+    cursor: default
+}
+input.inp1.inp-blue-alt,
+input.inp1.inp-blue-alt:hover,
+input.inp1.inp-blue:focus,
+input.inp1.inp-blue.active,
+input.inp1.inp-blue:hover {
+    border-color: #36f!important
+}
+input.inp1.inp-green-alt,
+input.inp1.inp-green-alt:hover,
+input.inp1.inp-green:focus,
+input.inp1.inp-green.active,
+input.inp1.inp-green:hover {
+    border-color: #1fa67b!important
+}
+input.inp1.inp-green-alt.active,
+input.inp1.inp-green.active,
+input.inp1.inp-green-alt:focus,
+input.inp1.inp-green:focus {
+    border-color: #999;
+    -webkit-box-shadow: 2px 2px 3px rgba(139, 237, 128, .48) inset;
+    -moz-box-shadow: 2px 2px 3px rgba(139, 237, 128, .48) inset;
+    -o-box-shadow: 2px 2px 3px rgba(139, 237, 128, .48) inset;
+    box-shadow: 2px 2px 3px rgba(139, 237, 128, .48) inset
+}
+input.inp1.inp-red-alt,
+input.inp1.inp-red-alt:hover,
+input.inp1.inp-red:focus,
+input.inp1.inp-red.active,
+input.inp1.inp-red:hover {
+    border-color: #dd4f39!important
+}
+input.inp1.inp-red-alt.active,
+input.inp1.inp-red.active,
+input.inp1.inp-red-alt:focus,
+input.inp1.inp-red:focus {
+    border-color: #999;
+    -webkit-box-shadow: 2px 2px 3px rgba(239, 98, 98, .48) inset;
+    -moz-box-shadow: 2px 2px 3px rgba(239, 98, 98, .48) inset;
+    -o-box-shadow: 2px 2px 3px rgba(239, 98, 98, .48) inset;
+    box-shadow: 2px 2px 3px rgba(239, 98, 98, .48) inset
+}
+input.inp-left {
+    border-radius: 4px 0 0 4px!important
+}
+input.inp-right {
+    border-radius: 0 4px 4px 0!important
+}
+input.inp-left-right {
+    border-radius: 0!important
+}

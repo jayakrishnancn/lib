@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="nav-set1.css">
+<link rel="stylesheet" href="../button1.css">
+<link rel="stylesheet" href="../input2.css">
+<link rel="stylesheet" href="../normalize.css">
+<script type="text/javascript" src="../../js/base.js"> </script>
+
+<style type="text/css">
+
+</style>
+  <!-- nav top-nav-->
+<div id="nav" class="top-nav">
+<!--top navigation menu-->
+<div class="center">
+    <a href="#"  class="nav-banner" >
+      <img src="../../images/prof.jpg" alt="Banner">
+    </a>
+    <span id="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+      </svg>
+    </span>
+     <span id="mob-box" class="mob">
+    <ul class="navbar-content ">
+      <li class="active" > <a href="#" class="active" >content</a></li>
+      <li id="one" class="drop-down">
+        <a class="xxdrop-down">content<span class="xxdrop-down dropdown_icon">&nbsp;</span></a>
+      <ul>
+        <li><a href="#" >drop-it drop-it drop-it drop-it </a></li>
+        <li><a href="#" >drop-it</a></li>
+        <li><a href="#" >drop-it</a></li>
+      </ul> 
+      </li>
+      <li>
+       <input class="inp2 inp-blue inp-left" style="width:92%" > 
+       <button class="bu1 bu-white">Search</button>
+      </li>   
+    </ul>    
+      <ul class="navbar-content left">
+       <li id="two" class="drop-down">
+        <a >content<span class="dropdown_icon">&nbsp;</span></a>
+      <ul>
+        <li><a href="#" >drop-it drop-it drop-it drop-it </a></li>
+        <li><a href="#" >drop-it</a></li>
+        <li><a href="#" >drop-it</a></li>
+      </ul>
+      <li><a href="#" >Logout</a></li>
+      </li>
+    </ul>
+    </span>
+</div>
+</div>
+<!-- nav top nav end-->
+
+
+<script type="text/javascript">
+$('html').click(function() { 
+  $('.drop-down ul').hide(); 
+  $('#nav #mob-box')[0].className="mob";  
+
+});
+
+$('#menu-icon').click(function(event){
+  $('#nav #mob-box').toggleclass("mob-box","mob"); 
+    event.stopPropagation();
+});
+$('#nav').click(function(event){
+    event.stopPropagation();
+});
+
+  $('#one.drop-down').click(function(){
+      $('#one.drop-down ul').toggle();
+    event.stopPropagation();
+  });
+  $('#two.drop-down').click(function(){
+      $('#two.drop-down ul').toggle();
+    event.stopPropagation();
+  });
+
+</script>
